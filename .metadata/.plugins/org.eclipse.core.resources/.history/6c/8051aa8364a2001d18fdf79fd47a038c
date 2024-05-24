@@ -1,0 +1,66 @@
+package wissenTech;
+
+public class InterThreadComm {
+	private static   int Acounter=0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		
+		Thread t1= new Thread(()->{
+			
+			for(int i=Acounter;i<=100;i++,Acounter++) {
+				System.out.println("[T1] thread counter "+i);
+			}
+			
+		});
+		
+		
+		
+		Thread t2= new Thread(()->{
+			
+			for(int i=0;i<=100;i++) {
+				if(i<Acounter)
+				{
+					System.out.println("[T2]--------->>>>>>>>>> thread counter "+i);
+				}else
+				{
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+			}
+			
+			
+		});
+		
+		
+		t1.start();
+		t2.start();
+	}
+
+}
+
+class Print implements Runnable
+{
+	public static boolean checkAcounterGreater=true;
+	
+	static Object lock=new Object();
+	void print()
+	{
+		System.out.println("Thread name "+Thread.currentThread().getName()+" counter "+counter);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+}

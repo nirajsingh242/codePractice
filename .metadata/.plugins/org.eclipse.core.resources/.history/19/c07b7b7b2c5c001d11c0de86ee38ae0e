@@ -1,0 +1,22 @@
+package gfg;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ArrayElementFrequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr={10,10,10};
+		ArrayFuntions.printArray(arr, "Array");
+		Map<Integer,Integer> frequencyOfElemnt=getfrequencyOfElemnt(arr);
+		System.out.println(frequencyOfElemnt);
+	
+	}
+
+	public static Map<Integer,Integer>  getfrequencyOfElemnt(int[] arr)
+	{
+	
+		return new HashMap<>();
+	}
+}

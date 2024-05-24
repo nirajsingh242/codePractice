@@ -1,0 +1,15 @@
+package wissenTech;
+
+public class Ball extends Apple{
+    public static void main(String[] args)
+    {
+        new Apple(); // works fine. 
+        new Apple(); // causes an exception 
+        new Ball(); // works fine as this is the first instance of B 
+        new Ball(); // causes an exception.
+    }
+}
+
+class Apple { 
+	  // code of class A
+	}

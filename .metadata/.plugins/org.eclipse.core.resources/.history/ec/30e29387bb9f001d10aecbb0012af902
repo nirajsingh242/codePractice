@@ -1,0 +1,23 @@
+package wissenTech;
+
+import java.util.List;
+
+public final class Person {
+	
+	//deep copy is required
+	
+	private final String name; 
+	private final Address add;
+	private final List<String> degrees;
+	public Person(String name, Address add, List<String> degrees) {
+		super();
+		this.name = name;
+		//deeep copy  as shallow copy will give direct refecnce to actuall object
+		Address newAddre =new Address(add.getAddressLine1(),add.getAddressLine2(),add.getPincode());
+		this.add = newAddre;
+		this.degrees = degrees;
+	}
+	
+	
+
+}

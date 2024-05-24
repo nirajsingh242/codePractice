@@ -1,0 +1,35 @@
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MainTemp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<Integer,String> map=new HashMap<>();
+		map.put(null, null);
+		map.put(null, null);
+		map.put(1, "Niraj");
+		map.put(2, "biraj");
+		map.put(3, "siraj");
+		
+		
+		List<Entry<Integer,String>> l = new LinkedList<>(map.entrySet());
+	
+		Comparator<String> cmp= new Comparator<String>() {
+
+			@Override
+			public int compare(String o1, String o2) {
+				// TODO Auto-generated method stub
+				return o1.toLowerCase().compareTo(o2.toLowerCase());
+			}
+		};
+		
+
+	}
+
+}

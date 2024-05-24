@@ -1,0 +1,17 @@
+package wissenTech;
+
+public class VolatileKeyWord {
+	private static int counter=0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		
+		Thread t1= new Thread(()->{
+			int local_counter=counter;
+			
+		});
+	}
+
+}

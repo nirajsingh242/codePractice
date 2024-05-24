@@ -1,0 +1,66 @@
+package wissenTech;
+
+public class MedianQuery {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static int[] mergeSort(int[] arr,int low,int high)
+	{
+	    if(low==high)
+	    {
+	    	int[] base=new int[1];
+	    	base[0]=arr[low];
+	        return base;
+	    }
+	    
+	    int mid=(low+high)/2;
+	    
+	   int[] sorted1 = mergeSort(arr,low,mid);
+	   int[] sorted2 = mergeSort(arr,mid+1,high);
+	   int[] finalsortedArray=merge(sorted1,sorted2);
+	   return finalsortedArray;
+	    
+	}
+	
+	
+	public static int[] merge(int [] leftArray,int[] rightArray)
+    {
+        int leftArraySize=leftArray.length;
+        int righArraySize=rightArray.length;
+        int[] finalArray=new int[leftArraySize+righArraySize];
+        int i=0,j=0,k=0;//leftarray tracking , rightArray Tracking , inputArray tracking
+        
+        while(i<leftArraySize && j<righArraySize)
+        {
+            if(leftArray[i]>rightArray[j]){
+                finalArray[k]=rightArray[j];
+                k++;
+                j++;
+            }else{
+                finalArray[k]=leftArray[i];
+                k++;
+                i++;
+            }
+        }
+        
+        while(i<leftArraySize)
+        {
+            finalArray[k]=leftArray[i];
+            k++;
+            i++;
+        }
+ 
+         while(j<righArraySize)
+        {
+            finalArray[k]=rightArray[j];
+            k++;
+            j++;
+        }
+            
+            
+            return finalArray;
+    }
+
+}

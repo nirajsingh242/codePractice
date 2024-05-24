@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;mapEmpcount&apos; from expression &apos;emp.stream().collect(Collectors.groupingBy(Employee::getName,Collectors.counting()))&apos;&#x0D;&#x0A;- Original project: &apos;Code&apos;&#x0D;&#x0A;- Variable name: &apos;mapEmpcount&apos;&#x0D;&#x0A;- Destination method: &apos;wissenTech.HashMapClass.main(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;emp.stream().collect(Collectors.groupingBy(Employee::getName,Collectors.counting()))&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;mapEmpcount&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;wissenTech{HashMapClass.java" name="mapEmpcount" replace="true" selection="3091 91" stamp="1675589442732" varType="false" version="1.0"/>
+</session>

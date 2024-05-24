@@ -1,0 +1,56 @@
+package wissenTech;
+
+public class ThreadExp2InstanceAndClasslevelLockOtherSimpleOption {
+	
+	//here no synchronized keyword required
+	// no static keyword reqired
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	 	
+		 A o1 = new A();
+	        A o2 = new A();
+	        
+	        
+	        MyThread t1=new MyThread(o1, "T1 thread with O1 object");
+	        MyThread t2=new MyThread(o2, "T2 thread with O2 object");
+	        
+	        t1.start();
+	        t2.start();
+	        
+	        
+	        ///we our m1 method in instance method then code give expected outpu
+//	        t1.start();
+//	        try {
+//				t1.join();
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//	        t2.start();
+//	        
+	        
+	        
+	        
+	}
+	
+	
+
+}
+
+class A{
+	
+		 public static synchronized void m1()
+		 {
+		 try {
+			Thread.sleep(5000);
+			System.out.println("Thread name "+Thread.currentThread().getName()+" priority : "+Thread.currentThread().getPriority() );
+			System.out.println("Thread name "+Thread.currentThread().getName()+" priority : "+Thread.currentThread().getPriority() );
+
+		 } catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 } 
+		 
+		 } 
+

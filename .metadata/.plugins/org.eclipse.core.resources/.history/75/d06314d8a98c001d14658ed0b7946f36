@@ -1,0 +1,11 @@
+package wissenTech;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {5,3,7,42,1,2};
+
+	}
+
+}

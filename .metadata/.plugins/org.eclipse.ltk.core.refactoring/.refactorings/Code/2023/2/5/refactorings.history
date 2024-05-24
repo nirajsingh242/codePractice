@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;VolatileKeyWord.java&apos; to &apos;Code/src/wissenTech&apos;&#x0D;&#x0A;- Original project: &apos;Code&apos;&#x0D;&#x0A;- Destination element: &apos;Code/src/wissenTech&apos;&#x0D;&#x0A;- Original element: &apos;wissenTech.VolatileKeyWord.java&apos;" description="Copy compilation unit" destination="/src&lt;wissenTech" element1="/src&lt;wissenTech{VolatileKeyWord.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1675276947321" units="1" version="1.0"/>
+</session>

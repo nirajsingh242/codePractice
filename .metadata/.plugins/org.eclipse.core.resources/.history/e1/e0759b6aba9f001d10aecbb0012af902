@@ -1,0 +1,21 @@
+package wissenTech;
+
+import java.util.List;
+
+public final class Person {
+	private final String name; 
+	private final List<String> degrees;
+	public Person(String name, List<String> degrees) {
+		this.name = name;
+		this.degrees = degrees;
+	}
+	public String getName() {
+		return name;
+	}
+	public List<String> getDegrees() {
+		return degrees;
+	}
+	
+	
+
+}

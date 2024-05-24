@@ -1,0 +1,14 @@
+package wissenTech;
+
+public class Address {
+	private String AddressLine1;
+	private String AddressLine2;
+	private String pincode;
+	public Address(String addressLine1, String addressLine2, String pincode) {
+		super();
+		AddressLine1 = addressLine1;
+		AddressLine2 = addressLine2;
+		this.pincode = pincode;
+	}
+
+}

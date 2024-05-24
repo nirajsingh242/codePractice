@@ -1,0 +1,12 @@
+package wissenTech;
+
+import java.util.List;
+
+public final class Person {
+	private final String name; 
+	private Address add;
+	private final List<String> degrees;
+	
+	
+
+}

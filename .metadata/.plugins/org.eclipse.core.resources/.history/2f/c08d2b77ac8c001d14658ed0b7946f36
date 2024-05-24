@@ -1,0 +1,72 @@
+package wissenTech;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {5,3,7,42,1,2};
+		int[] output= mergeSort(arr,0,arr.length-1);
+		
+for(int a:output)
+{
+	System.out.print(" "+a);
+}
+	}
+
+	private static int[] mergeSort(int[] arr, int low, int high) {
+		// TODO Auto-generated method stub
+		if(low==high)
+		{
+			int[] base=new int[1];
+			base[0]=arr[low];
+			return base;
+			
+		}
+		
+		int mid=(low+high)/2;
+		int[] lefthalf=mergeSort(arr,low,mid);
+		int[] righthalf=mergeSort(arr,mid+1,high);
+		
+		return merge(lefthalf,righthalf);
+		
+	}
+
+	public static int[] merge(int [] leftArray,int[] rightArray)
+    {
+        int leftArraySize=leftArray.length;
+        int righArraySize=rightArray.length;
+        int[] finalArray=new int[leftArraySize+righArraySize];
+        int i=0,j=0,k=0;//leftarray tracking , rightArray Tracking , inputArray tracking
+        
+        while(i<leftArraySize && j<righArraySize)
+        {
+            if(leftArray[i]>rightArray[j]){
+                finalArray[k]=rightArray[j];
+                k++;
+                j++;
+            }else{
+                finalArray[k]=leftArray[i];
+                k++;
+                i++;
+            }
+        }
+        
+        while(i<leftArraySize)
+        {
+            finalArray[k]=leftArray[i];
+            k++;
+            i++;
+        }
+ 
+         while(j<righArraySize)
+        {
+            finalArray[k]=rightArray[j];
+            k++;
+            j++;
+        }
+            
+            
+            return finalArray;
+    }
+
+}

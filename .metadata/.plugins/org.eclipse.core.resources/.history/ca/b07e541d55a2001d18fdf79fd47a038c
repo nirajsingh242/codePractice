@@ -1,0 +1,27 @@
+package wissenTech;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ball extends Apple{
+    public static void main(String[] args)
+    {
+        new Apple(); // works fine. 
+        new Apple(); // causes an exception 
+        new Ball(); // works fine as this is the first instance of B 
+        new Ball(); // causes an exception.
+    }
+}
+
+class Apple { 
+	  // code of class A
+	private static final Set<Class<? extends Apple>> INSTANCES = new HashSet<>();
+
+    public Apple() {
+        synchronized (INSTANCES) {
+            if (INSTANCES.contains(getClass()))
+                throw new RuntimeException("duplication: " + getClass().getSimpleName());
+            INSTANCES.add(getClass());
+        }
+    }
+	}

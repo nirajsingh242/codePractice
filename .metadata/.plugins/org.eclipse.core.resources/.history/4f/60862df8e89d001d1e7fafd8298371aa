@@ -1,0 +1,33 @@
+package wissenTech;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MainForCustomMap extends MapMethodCallCount{
+
+	public MainForCustomMap(Map map) {
+		super(map);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<String, Integer> copyMap = new HashMap<>();
+		MapMethodCallCount<String, Integer> mmcc = new MapMethodCallCount<>(new HashMap<>());
+		
+		//psmd.put("A", null);
+		mmcc.put("B", 2);
+		mmcc.putIfAbsent("A", 4); 
+		copyMap.putAll(mmcc);
+		
+		System.out.println(" put count"+mmcc.getCountPut()+"");
+		System.out.println(" put count"+mmcc.getCountPutAll()+"");
+		System.out.println(" put count"+mmcc.getCountPutIfAbsent()+"");
+		
+		System.out.println(copyMap);
+		
+	// psmd.getCountPutAll() and psmd.getCountPutIfAbsent() 
+	}
+
+}

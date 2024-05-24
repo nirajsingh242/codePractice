@@ -1,0 +1,8 @@
+package wissenTech;
+
+public class Address {
+	private String AddressLine1;
+	private String AddressLine2;
+	private String pincode;
+
+}

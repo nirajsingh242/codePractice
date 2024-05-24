@@ -1,0 +1,21 @@
+package wissenTech;
+
+public class CamelCaseStringTOSnakeCaseSTring {
+
+	public static void main(String[] args) {
+		
+	String str="GeeksForGeeks";
+	
+	
+	char[] charArray=str.toCharArray();
+	StringBuilder result=new StringBuilder();
+	
+	
+	for(int i=1;i<charArray.length;i++)
+	{
+		
+	}
+	
+	}
+	
+}

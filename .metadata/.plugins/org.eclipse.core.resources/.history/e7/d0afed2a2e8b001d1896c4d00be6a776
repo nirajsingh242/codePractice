@@ -1,0 +1,44 @@
+package wissenTech;
+
+import java.util.Scanner;
+
+public class elementFarthestFromZero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner s =new Scanner(System.in);
+		int n=s.nextInt();
+		int[] arr = new int[n];
+		
+		for(int i = 0; i < n; i++)
+		{
+			arr[i] = s.nextInt();
+		}
+
+		
+	}
+	
+	public static void fnfz(int arr[], int N) {
+
+		 int farthestDistance = Integer.MIN_VALUE;
+
+		 for (int i = 0; i < N; i++) {
+
+		  if (arr[i] < 0) {
+
+		   if (farthestDistance <= Math.abs(arr[i]))
+
+		    farthestDistance = arr[i];
+
+		  } else {
+
+		   farthestDistance = arr[i];
+
+		  }
+
+		 }
+
+	}
+	
+}

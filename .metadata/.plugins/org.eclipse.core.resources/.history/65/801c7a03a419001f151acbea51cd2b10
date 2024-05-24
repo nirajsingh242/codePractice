@@ -1,0 +1,20 @@
+package sortingAlo;
+
+import java.util.Arrays;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {1,2,3,5,4,6,0};
+		InstertionSort(arr);
+		Arrays.stream(arr).forEach(System.out::print);
+		}
+
+	private static void InstertionSort(int[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+	}
+
+
