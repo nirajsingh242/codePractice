@@ -1,0 +1,24 @@
+grouping and counting:
+-->Collectors.groupingBy(Function.identity(), Collectors.counting())
+
+Ordering 
+sorted(Comparator.naturalOrder())
+ sorted(Comparator.reverseOrder())
+ sorted(Comparator.comparing(String::length))
+ 
+ joing method:
+ Collectors.joining(", ", "[", "]") used inside Collect method
+ Collectors.joining() -> gives String simply data
+ 
+ getting max and min 
+ max(Comparator.naturalOrder()).get()
+ 
+ to merge 2 different integer
+ IntStream.concat(Arrays.stream(a), Arrays.stream(b))
+ 
+ merging multiple list
+ Stream.of(list1, list2, list3)
+.flatMap(List::stream)
+
+skiping getting value from findFirst:
+listOfIntegersss.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();

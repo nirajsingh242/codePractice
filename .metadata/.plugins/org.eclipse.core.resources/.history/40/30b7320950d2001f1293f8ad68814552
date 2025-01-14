@@ -1,0 +1,8 @@
+grouping and counting:
+-->Collectors.groupingBy(Function.identity(), Collectors.counting())
+
+Ordering 
+ sorted(Comparator.reverseOrder())
+ 
+ joing method:
+ Collectors.joining(", ", "[", "]") used inside Collect method

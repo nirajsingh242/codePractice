@@ -1,0 +1,16 @@
+package designPatternBehavioral;
+
+public class Youtube {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Subscriber s1=new Subscriber("Niraj");
+		Subscriber s2=new Subscriber("Prashant");
+		Subscriber s3=new Subscriber("Sonu");
+		Subscriber s4=new Subscriber("Vishal");
+		Subscriber s5=new Subscriber("Manish");
+		
+
+	}
+
+}

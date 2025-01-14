@@ -1,0 +1,51 @@
+
+public class BalanceParanthesis {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String balancedParanthesis="({[]})";
+		String unBalancedParanthesis="({[])";
+		
+		System.out.print(checkBalancedParanthesis(balancedParanthesis));
+		System.out.print(checkBalancedParanthesis(unBalancedParanthesis));
+		
+
+	}
+
+	private static boolean checkBalancedParanthesis(String balancedParanthesis) {
+		// TODO Auto-generated method stub
+		
+		int i=-1;
+		char[] stack=new char[balancedParanthesis.length()];
+		
+		
+		for(char ch: balancedParanthesis.toCharArray())
+		{
+			if(ch=='(' || ch=='[' || ch=='{')
+			{
+				stack[++i]=ch;
+			}else
+			{
+				if((stack[i]=='(' && ch==')') || (stack[i]=='[' &&ch==']') || (stack[i]=='{' &&ch=='}'))
+				{
+					i--;
+				}else
+				{
+					return false;
+				}
+				
+			}
+			
+			return i==-1;
+		}
+		
+		
+		
+		
+		return false;
+		
+	}
+	
+	
+	
+}

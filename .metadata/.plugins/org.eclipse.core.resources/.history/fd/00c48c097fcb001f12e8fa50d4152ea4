@@ -1,0 +1,21 @@
+package designPatternBehavioral;
+
+public class Subscriber {
+	private String name;
+	private Channel c;
+	
+	public Subscriber(String name) {
+		super();
+		this.name = name;
+	}
+
+	public void update()
+	{
+		System.out.println("hey "+name +" Video uploaded"+" of subject "+c.title);
+	}
+	
+	public void subscribeChannel(Channel c)
+	{
+		this.c=c;
+	}
+}

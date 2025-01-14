@@ -10,7 +10,7 @@ public class RemovingDuplicateChar {
 		//2)String char duplication--> converting it to char[] and the sam process
 		
 		char[] str={'a','b','c','c','d','d','e'};
-		removeDuplicateCharBetter(str);
+		removeDuplicateCharBetter1(str);
 		
 		//System.out.print(removeDuplicateChar(str,str.length));
 		
@@ -34,6 +34,21 @@ public class RemovingDuplicateChar {
 			System.out.println(character);
 		}
 		
+		
+	}
+	
+	public static void removeDuplicateCharBetter1(char[]  str)
+	{
+		HashSet<Character> h=new HashSet<>();
+		
+		for(Character c:str)
+		{
+			h.add(c);
+		}
+		for(Character  character: h)
+		{
+			System.out.println(character);
+		}
 		
 	}
 	

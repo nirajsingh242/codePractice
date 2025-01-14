@@ -1,0 +1,18 @@
+grouping and counting:
+-->Collectors.groupingBy(Function.identity(), Collectors.counting())
+
+Ordering 
+ sorted(Comparator.reverseOrder())
+ 
+ joing method:
+ Collectors.joining(", ", "[", "]") used inside Collect method
+ 
+ getting max and min 
+ max(Comparator.naturalOrder()).get()
+ 
+ to merge 2 different integer
+ IntStream.concat(Arrays.stream(a), Arrays.stream(b))
+ 
+ merging multiple list
+ Stream.of(list1, list2, list3)
+.flatMap(List::stream)

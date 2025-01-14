@@ -1,0 +1,39 @@
+grouping and counting:
+-->Collectors.groupingBy(Function.identity(), Collectors.counting())
+
+Ordering 
+sorted(Comparator.naturalOrder())
+ sorted(Comparator.reverseOrder())
+ sorted(Comparator.comparing(String::length))
+ 
+ joing method:
+ Collectors.joining(", ", "[", "]") used inside Collect method
+ Collectors.joining() -> gives String simply data
+ 
+ getting max and min 
+ max(Comparator.naturalOrder()).get()
+ 
+ to merge 2 different integer
+ IntStream.concat(Arrays.stream(a), Arrays.stream(b))
+ 
+ merging multiple list
+ Stream.of(list1, list2, list3)
+.flatMap(List::stream)
+
+skiping getting value from findFirst:
+listOfIntegersss.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+
+
+sum and average:
+int[] a = new int[] {45, 12, 56, 15, 24, 75, 31, 89};
+int sum = Arrays.stream(a).sum();
+double average = Arrays.stream(a).average().getAsDouble();
+
+
+common element between two arrayList
+list1.stream().filter(list2::contains)
+
+
+Print first 10 even numbers
+ IntStream.rangeClosed(1, 10) --> gives boundry
+ IntStream.rangeClosed(1, 10).map(i -> i * 2).forEach(System.out::println);

@@ -1,0 +1,11 @@
+package threadseExample;
+import java.util.concurrent.*;
+public class RetrantLockExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ReetrantLock l=new ReetrantLock();
+	}
+
+}

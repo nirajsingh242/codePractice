@@ -20,62 +20,91 @@ public class CommonsChar {
 //		
 		//getCommonCharfromStrings(List.of("Hello","world"));
 		
-		for(Character ch:getCommonCharfromStrings(List.of("hello","world","lo","o")))
+		for(Character ch:getCommonCharfromStrings(List.of("abbc","cde","fgc")))
 		{
 			System.out.print(ch+" ");
 		}
 	}
 	
 	
-	public static List<Character> getCommonCharfromStrings(List<String> strList)
-	{
-		int[] common=new int[26];
-		Arrays.fill(common, 1);
-		List<Character> result=new ArrayList<>();
+	
+	
+//	public static List<Character> getCommonCharfromStrings(List<String> strList)
+//	{int[] common = new int[26];
+//    Arrays.fill(common, Integer.MAX_VALUE);  // Fill with max value
+//
+//    for (String str : strList) {
+//        str = str.toLowerCase();
+//        int[] temp = new int[26];
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            temp[str.charAt(i) - 'a']++;
+//        }
+//
+//        for (int i = 0; i < 26; i++) {
+//            common[i] = Math.min(common[i], temp[i]);
+//        }
+//    }
+//
+//    List<Character> result = new ArrayList<>();
+//    for (int i = 0; i < 26; i++) {
+//        if (common[i] > 0) {  // Only add if the character appears in all strings
+//            result.add((char) (i + 'a'));
+//        }
+//    }
+//
+//    return result;}
+//	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	private static List<Character> getCommonCharfromStrings(List<String> lsitOfString) {
+		// TODO Auto-generated method stub
 		
-		for(String str:strList)
+		int[] common =new int[26];
+		Arrays.fill(common, Integer.MAX_VALUE);
+		
+		
+		for(String str: lsitOfString)
 		{
-			str=str.toLowerCase();
-			int[] temp=new int[26];
-			Arrays.fill(temp, 0);
+
+			int[] temp =new int[26];
+			//Arrays.fill(temp, 0);
 			
 			for(int i=0;i<str.length();i++)
 			{
 				temp[str.charAt(i)-'a']++;
 			}
 			
-			
-			for(int i=0;i<26;i++)
+			for(int i=0;i<temp.length;i++)
 			{
 				common[i]=Math.min(common[i], temp[i]);
 			}
 			
+			
+			
 		}
-		
-		
+		List<Character> result= new ArrayList<>();
 		for(int i=0;i<26;i++)
 		{
-			if(common[i]==1)
+			if(common[i]>0)
 			{
-				Character commonChar=(char) ((char)97+i);
-				result.add(commonChar);
+				result.add((char)(i+'a'));
 			}
-		
 		}
-			
 		
 		return result;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
 	public static List<Character> getCommonCharsBetweenTwoStrings(String str1,String str2)
 	{
 		char[] str1Array1=str1.toCharArray();

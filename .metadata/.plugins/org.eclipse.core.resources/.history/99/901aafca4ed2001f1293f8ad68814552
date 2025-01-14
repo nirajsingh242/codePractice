@@ -1,0 +1,35 @@
+package java8questions;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class JavaConceptPractice {
+
+	public static void main(String[] args) {
+
+		 
+		 System.out.println("//3) How do you find frequency of each character in a string using Java 8 streams?");
+		 String inputString = "Java Concept Of The Day";
+		 Map<Character, Long> collect = inputString.chars().
+				 mapToObj(c->(char)c).filter(c->!c.toString().trim().equals("")).
+				 collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		 collect.entrySet().stream().forEach(System.out::println);
+		 
+		 System.out.println("How do you find frequency of each element in an array or a list?");
+		 List<String> stationeryList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
+		 
+		 Map<String, Long> collect2 = stationeryList.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		 collect2.entrySet().stream().forEach(System.out::println);
+		 
+		 System.out.println("How do you sort the given list of decimals in reverse order?");
+		 List<Double> decimalList = Arrays.asList(12.45, 23.58, 17.13, 42.89, 33.78, 71.85, 56.98, 21.12);
+		 decimalList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).forEach(System.out::println);
+		 
+		 
+	}
+
+}

@@ -1,0 +1,10 @@
+package solid.priciple;
+
+public class PayCalculatorDI {
+	private MySqlConnection myDbCon;
+
+	public PayCalculatorDI(MySqlConnection myDbCon) {
+		this.myDbCon = myDbCon;
+	}
+
+}

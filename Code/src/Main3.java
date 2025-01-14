@@ -18,27 +18,27 @@ public class Main3 {
 		ListIterator<String> iterate=l.listIterator();
 		while(iterate.hasNext())
 		{
+			
 			System.out.println(iterate.next());
 			l.remove(0);
-			
 			
 		}
 
 
 	
-//	//fails safe
-//	//No java.util.ConcurrentModificationException
-//	CopyOnWriteArrayList<String> li=new CopyOnWriteArrayList<>();
-//	li.add("A");
-//	li.add("B");
-//	Iterator iteratorVals = li.iterator();
-//	
-//	while(iteratorVals.hasNext())
-//	{
-//		li.remove(1);
-//		System.out.println(iteratorVals.next());
-//		
-//	}
+	//fails safe
+	//No java.util.ConcurrentModificationException
+	CopyOnWriteArrayList<String> li=new CopyOnWriteArrayList<>();
+	li.add("A");
+	li.add("B");
+	Iterator iteratorVals = li.iterator();
+	
+	while(iteratorVals.hasNext())
+	{
+		li.remove(1);
+		System.out.println(iteratorVals.next());
+		
+	}
 
 }
 }

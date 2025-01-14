@@ -1,0 +1,48 @@
+package threadseExample;
+
+public class InterThreadCommunication {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		ThreadB t=new ThreadB();
+		t.start();
+		
+		//1 if my below line values requires from other thread execution, in this scenario it will always gives invalid result
+		 //a main thread executed befor : 0;
+		//ThreadB executed before main thread : correct output
+		//if initial for some time threadb executed then main thread : we get intermeiate ans
+		//System.out.println("Total :"+t.total);
+
+		
+		
+		//2 we can use sleep to solve this problem
+		//here the problem is, unnecessary waiting of thread for specied tym even thread execution completed
+		//Thread.sleep(1);
+		//System.out.println("Total :"+t.total);
+		
+		//3 we can use join
+		//here is problem is if thread execution for total variable is completed and we have another 1000 line of code whoes output is not required for main thread
+		//so performance will be degraded
+		t.join();
+		System.out.println("Total :"+t.total);
+		
+
+	}
+
+}
+
+ class ThreadB extends Thread
+{
+	 int total=0;
+	 @Override
+		public void run() {
+	 
+		 for(int i=1;i<=100;i++)
+		 {
+			 total=total+i;
+		 }
+	 }
+	 
+	 Thread.sleep(10000);
+}

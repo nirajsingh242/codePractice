@@ -1,0 +1,32 @@
+package threadseExample;
+
+public class InteruptSleepingThread implements Runnable{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		InteruptSleepingThread i=new InteruptSleepingThread();
+		Thread t1=new Thread(i);
+		t1.start();
+		t1.interrupt();
+
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		for(int i=0;i<5;i++)
+		{
+			System.out.println("Run method execution");
+//			try {
+//				//Thread.sleep(2000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				System.out.println("Run method got interuupted");
+//				
+//			}
+		}
+		
+	}
+
+}

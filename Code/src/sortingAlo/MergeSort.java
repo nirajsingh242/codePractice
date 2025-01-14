@@ -19,51 +19,51 @@ public class MergeSort {
 		if(array.length<2)
 		{
 			return;
-		}else {
-			
-			int mid=length/2;
-			int[] larray=Arrays.copyOfRange(array, 0, mid);
-			int[] rarray=Arrays.copyOfRange(array, mid,length);
-			mergeSort(larray,mid);
-			mergeSort(rarray,length-mid);
-			
-			merge(array,larray,rarray);
-			
 		}
+		
+		int mid=length/2;
+		int[] leftArray=Arrays.copyOfRange(array, 0,mid);
+		int[] rightArray=Arrays.copyOfRange(array, mid,length);
+		
+		mergeSort(leftArray, mid);
+		mergeSort(rightArray, length-mid);
+		
+		merge(array,leftArray,rightArray);
+		
+		
 		
 	}
 
-	private static void merge(int[] array, int[] larray, int[] rarray) {
+	private static void merge(int[] array,int[] leftArray, int[] rightArray) {
 		// TODO Auto-generated method stub
 		int i=0,j=0,k=0;
 		
-		int leftArraySize=larray.length;
-		int rightArraySize=rarray.length;
+		int leftArraySize=leftArray.length;
+		int rightArraySize=rightArray.length;
 		
 		while(i<leftArraySize && j<rightArraySize)
 		{
-			if(larray[i]<rarray[j])
+			if(leftArray[i]<rightArray[j])
 			{
-				array[k++]=larray[i++];
+				array[k++]=leftArray[i++];
 			}else
 			{
-				array[k++]=rarray[j++];
+				array[k++]=rightArray[j++];
 			}
 		}
 		
-		
-		
 		while(i<leftArraySize)
 		{
-				array[k++]=larray[i++];
-		}
+				array[k++]=leftArray[i++];
 		
+		}
 		
 		while(j<rightArraySize)
 		{
-				array[k++]=rarray[j++];
+				array[k++]=rightArray[j++];
 		}
 		
 	}
 
+	
 }

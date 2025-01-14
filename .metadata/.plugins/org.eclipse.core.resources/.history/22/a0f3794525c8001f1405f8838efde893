@@ -1,0 +1,15 @@
+package threadseExample;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorServiceExample {
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.execute(() -> {
+            System.out.println("Thread is running");
+        });
+        executorService.shutdown(); // Gracefully shuts down the executor service
+        
+        //order of execution cannot be defined.
+    }
+}

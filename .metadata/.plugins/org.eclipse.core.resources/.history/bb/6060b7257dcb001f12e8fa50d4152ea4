@@ -1,0 +1,11 @@
+package designPatternBehavioral;
+
+public class Subscriber {
+	private String name;
+	private Channel c;
+	
+	public void update()
+	{
+		System.out.println("Video uploaded");
+	}
+}

@@ -1,0 +1,12 @@
+package java8questions;
+
+public class JavaConceptPractice {
+
+	public static void main(String[] args) {
+
+		//3) How do you find frequency of each character in a string using Java 8 streams?
+		 String inputString = "Java Concept Of The Day";
+
+	}
+
+}

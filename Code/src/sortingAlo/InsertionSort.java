@@ -6,31 +6,27 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		int[] arr= {1,2,3,9,5,4,6,0};
-		InsertionSort(arr);
+		insertionSort(arr);
 		Arrays.stream(arr).forEach(System.out::print);
 		}
 
-	private static void InsertionSort(int[] arr) {
-		// TODO Auto-generated method stub
-		
+	//always key will be in temp unless its place being found
+	public static void insertionSort(int[] arr)
+	{
 		for(int i=1;i<arr.length;i++)
 		{
-			for(int j=i-1;j>=0;j--)
-			{
-				if(arr[j]>arr[j+1])
+
+				int key=arr[i];
+				int j=i-1;
+				
+				while(j>=0 &&arr[j]>key)
 				{
-					int temp=arr[j];
-					arr[j]=arr[j+1];
-					arr[j+1]=temp;
-				}else
-				{
-					// do nothing
+					arr[j+1]=arr[j];
+					j--;
 				}
 				
-			}
-			
+				arr[j+1]=key;
 		}
-		
 	}
 
 	}

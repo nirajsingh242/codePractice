@@ -1,0 +1,16 @@
+package designPatternStructural;
+
+public class CompositeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Component ram=new Leaf(3000, "RAM");
+		Component hdd=new Leaf(2000, "HDD");
+		Component monitor=new Leaf(3000, "monitor");
+		Component cpu=new Leaf(3000, "CPU");
+		Component keybord=new Leaf(3000, "KEYBOARD");
+
+	}
+
+}

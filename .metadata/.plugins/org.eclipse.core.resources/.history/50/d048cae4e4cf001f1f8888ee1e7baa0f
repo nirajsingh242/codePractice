@@ -1,0 +1,19 @@
+package java8questions;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class InterviewQuestions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Given a list of integers, find out all the 
+		//even numbers that exist in the list using Stream functions?
+		List<Integer> list = Arrays.asList(10,15,8,49,25,98,32);
+		List<Integer> evenNumber = list.stream().filter(n->n%2==0).collect(Collectors.toList());
+
+		evenNumber.stream().forEach(System.out::println);
+	}
+
+}

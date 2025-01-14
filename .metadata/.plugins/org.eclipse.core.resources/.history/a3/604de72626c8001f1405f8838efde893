@@ -1,0 +1,25 @@
+package threadseExample;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorServiceExample {
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.execute(() -> {
+            System.out.println("Thread is running");
+        });
+        executorService.shutdown(); // Gracefully shuts down the executor service
+        
+        //order of execution cannot be defined.
+        
+        ExecutorService executorServices = Executors.newFixedThreadPool(10);
+        executorServices.execute((() -> {
+            System.out.println("Thread is running "+Thread.currentThread().getName());
+        }));
+        //1)thready cylce not to manage
+        //2)just assign job
+        
+        
+        
+    }
+}

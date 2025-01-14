@@ -1,0 +1,5 @@
+package designPatternBehavioral;
+
+public class Subscriber {
+
+}

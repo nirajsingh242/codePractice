@@ -1,0 +1,20 @@
+
+public class BalanceParanthesis {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println(isPalindrone("ABAA", 0, 3));
+	}
+	
+	
+	public static boolean isPalindrone(String str,int start,int end)
+	{
+		if(start>=end)
+		{
+			return true;
+		}
+		
+		return str.charAt(start)==str.charAt(end) && (isPalindrone(str, start+1, end-1));
+		
+	}
+}

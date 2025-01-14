@@ -1,0 +1,17 @@
+package threadseExample;
+public class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("Thread is running "+Thread.currentThread().getName() );
+    }
+
+    public static void main(String[] args) {
+        MyRunnable myRunnable = new MyRunnable();
+        myRunnable.run();
+        Thread thread = new Thread(myRunnable);
+        thread.start(); // Starts the thread
+        //thread.setName("hello");
+       /// System.out.println("Thread is running" +thread.getName() +" main thread name "+Thread.currentThread().getName() );
+        
+    }
+}

@@ -1,0 +1,21 @@
+package designPatternBehavioral;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Channel {
+String name;
+List<Subscriber> s=new ArrayList<>();
+
+public void register(Subscriber sub)
+{
+	s.add(sub);
+}
+
+public void unRegister(Subscriber sub)
+{
+	s.remove(sub);
+}
+
+
+}

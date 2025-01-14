@@ -1,0 +1,5 @@
+package solid.priciple;
+
+public class PayCalculatorDI {
+
+}

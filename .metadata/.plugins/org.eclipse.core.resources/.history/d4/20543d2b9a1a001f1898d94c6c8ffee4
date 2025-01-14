@@ -1,0 +1,57 @@
+import java.util.Arrays;
+
+public class RotateKTimesAnArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {1,2,3,4,5,6};
+		
+		int k=3;
+		int ans[]=roatateKTimes(arr,k); //right rotate with formula
+		Arrays.stream(ans).forEach(System.out::print);
+		//roatateleftKTimes(arr,k); //left roate without formula
+		//Arrays.stream(arr).forEach(System.out::print);
+		
+	}
+
+	private static int[] roatateKTimes(int[] arr, int k) {
+		// TODO Auto-generated method stub
+		//formula ans[(i+k)%n]=arr[i]
+		int[] temp=new int[arr.length];
+		for(int i=0;i<arr.length;i++)
+		{
+			temp[(i+k)%arr.length]=arr[i];
+		}
+
+		return temp;
+	}
+	
+	private static int[] roatateleftKTimes(int[] arr, int k) {
+		// TODO Auto-generated method stub
+		//formula ans[(i+k)%n]=arr[i]
+		int[] temp=new int[arr.length];
+		for(int i=0;i<arr.length;i++)
+		{
+			temp[(arr.length+i-k)%arr.length]=arr[i];
+		}
+
+		return temp;
+	}
+	
+	private static void roatateKTimesLeft(int[] arr, int k) {
+		// TODO Auto-generated method stub
+		k=k%arr.length;// to reduce unwanted rotations
+		
+		for(int i=1;i<=k;i++)
+		{
+			int temp=arr[0];
+			for(int j=1;j<arr.length;j++)
+			{
+				arr[j-1]=arr[j];
+			}
+			arr[arr.length-1]=temp;
+		}
+
+	}
+
+}
