@@ -12,17 +12,12 @@ public class ExecutorServiceExample {
         
         //order of execution cannot be defined.
         
-        ExecutorService executor = Executors.newFixedThreadPool(3);
-        for (int i = 0; i < 5; i++) {
-            int taskId = i;
-            executor.submit(() -> {
-                System.out.println("Task " + taskId + " executed by " + Thread.currentThread().getName());
-            });
-        }
-        executor.shutdown();
+        ExecutorService executorServices = Executors.newFixedThreadPool(10);
+        executorServices.execute((() -> {
+            System.out.println("Thread is running "+Thread.currentThread().getName());
+        }));
         //1)thready cylce not to manage
         //2)just assign job
-        
         
         
         

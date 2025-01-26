@@ -28,10 +28,10 @@ public class HashMapSortingWays {
 			map.put(34, "perry");
 	        
 	        printMap(map,"raw map");
-	       //SortByKeyUsingTreemap(map);
+	       SortByKeyUsingTreemap(map);
 	        //SortByKeyUsingLinkedHashMap(map);
 	        
-	        SortByValueUsingLinkedHashMap1(map);
+	        //SortByValueUsingLinkedHashMap1(map);
 	       
 	        
 	}
@@ -58,7 +58,7 @@ public class HashMapSortingWays {
 		List<Map.Entry<Integer, String>> l=new ArrayList<>(map.entrySet());
 		Collections.sort(l,Comparator.comparing(Map.Entry::getValue));
 		
-		Map<Integer,String> result=new LinkedHashMap<>();
+		Map<Integer,String> result=new HashMap<>();
 		for(Map.Entry<Integer, String> m:l )
 		{
 			result.put(m.getKey(), m.getValue());

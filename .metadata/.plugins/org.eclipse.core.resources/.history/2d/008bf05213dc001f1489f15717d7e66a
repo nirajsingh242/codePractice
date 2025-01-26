@@ -1,0 +1,23 @@
+package wissenTech;
+
+import java.util.Arrays;
+
+public class Flattening {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Object arr[] = { 1, 2, new Object[] { 4, new int[] { 5, 6 ,}, 7 }, 10 };
+		    String deepToString = Arrays.deepToString(arr);
+		    String replace = deepToString.replace("[", "").replace("]", "");
+		    String array[] = replace.split(",");
+		    int temp[] = new int[array.length];
+		    for (int i = 0; i < array.length; i++) {
+		        temp[i] = Integer.parseInt(array[i].trim());
+		    }
+		    System.out.println(Arrays.toString(temp));
+
+	}
+	
+	
+
+}

@@ -1,0 +1,44 @@
+
+public class Kadanes {
+
+	public static void main(String[] args) {
+		System.out.println("hello world");
+		 int arr[] = { 12, -11, 5, 5, 6, -28 };
+        //calling maxSubarraySum() function
+        System.out.println(maxSubArray(arr));
+
+	}
+
+	private static int maxSubArray(int[] arr) {
+		int csum=arr[0];
+		int osum=arr[0];
+		
+		int startIndex=0;
+		int endIndex=0;
+		
+		for(int i=1;i<arr.length;i++)
+		{
+			if((csum+arr[i])>=0)
+			{
+				csum=csum+arr[i];
+				
+			}else
+			{
+				csum=arr[i];
+			}
+			
+			
+			if(osum<csum)
+			{
+				osum=csum;
+				endIndex=i;
+			}
+			
+		}
+			
+		System.out.println("start index "+startIndex+" endIndex "+endIndex);
+		
+		return osum;
+	}
+
+}

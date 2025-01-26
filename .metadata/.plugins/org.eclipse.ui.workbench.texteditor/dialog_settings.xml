@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="SortByKeyUsingLinkedHashMap"/>
 			<item value="run"/>
 			<item value="join"/>
 			<item value="yield"/>
