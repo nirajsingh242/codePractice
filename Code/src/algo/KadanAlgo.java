@@ -49,41 +49,7 @@ public class KadanAlgo {
 		
 	}
 	
-private static int practice(int[] arr)
-{
-	int csum=arr[0];
-	int osum=arr[0];
-	
-	int startIndex=0;
-	int endIndex=0;
-	
-	
-	for(int i=1; i< arr.length;i++)
-	{
-		if(csum>0)
-		{
-			csum+=arr[i];
-		}else
-		{
-			csum=arr[i];
-			startIndex=i;
-		}
-		
-		
-		if(csum>osum)
-		{
-			osum=csum;
-			endIndex=i;
-		}
-		
-		}
-	System.out.println("sIndex "+startIndex+" :: endIndex "+endIndex);
-	
-	
-	return osum;
-	
-	
-}
+
 	
 
 }
