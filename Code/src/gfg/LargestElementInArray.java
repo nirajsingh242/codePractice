@@ -13,16 +13,16 @@ public class LargestElementInArray {
 
 	public static int getSecondLargest(int[] arr,int n)
 	{
-		int largest=0;
+		int res=0;
 		int secondLargestIndex=-1;
 		for(int i=1;i<n;i++)
 		{
-			if(arr[i]>arr[largest])
+			if(arr[i]>arr[res])
 			{
-				secondLargestIndex=largest;
-				largest=i;
+				secondLargestIndex=res;
+				res=i;
 			}
-			else if(arr[i]<arr[largest])
+			else if(arr[i]<arr[res])
 			{
 				if(secondLargestIndex==-1)
 				{
