@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -74,14 +75,14 @@ public class Practice {
 	    .entrySet().stream().max(Map.Entry.comparingByValue()).get());
 	  
 	    System.out.println("Find first   repeated character in a string?");
-	    String inputString1 = "Java Concept Of The Day".replaceAll("\\s+", "").toLowerCase();
-	    System.out.println(inputString1);
-	    System.out.println(inputString1.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
-	    .entrySet().stream().filter(c->c.getValue()>1).findFirst().get());
-				
-
-	    System.out.println(inputString1.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
-	    .entrySet().stream().filter(c->c.getValue()==1).findFirst().get());
+	    String inputString="Java Concept Of The Day".replaceAll("\\s+", "");
+	    System.out.println(inputString.chars().mapToObj(ch->(char)ch).
+	    collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
+	    .entrySet().stream().filter(ss->ss.getValue()==1).findFirst().get());
+	    
+	    
+	    Optional.ofNullable(null);
+	    Optional.of(null);//-> ways to creat optional obj -> used when certanity that onject can be null and need to be handeled
 	}
 	
 	
